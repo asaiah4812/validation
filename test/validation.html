@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div>
+
+        </div>
+        <form class="form">
+            <h1>Valiation</h1>
+            <input type="text" name="username" placeholder="username">
+            <input type="email" name="email" placeholder="Enter email">
+            <input type="password" name="password1" placeholder="Enter password">
+            <input type="password" name="password2" placeholder="Confirm password">
+            <span class="alert"></span>
+            <button type="button" onclick="submitForm()">submit</button>
+        </form>
+    </section>
+    <script src="">
+
+    </script>
+    <script >
+        // let h1 = document.querySelector('h1');
+        // if(h1.innerHTML === 'Validation'){
+        //     alert('is Correct')
+        //     console.log('is Correct');
+        // }else{
+        //     alert('is Not Correct')
+        //     console.log('is Not Correct');
+        // }
+        
+
+let form = document.querySelector('.form');
+let alert = document.querySelector('.alert');
+function submitForm(){
+    if(form.username.value.length < 5){
+        alert.innerHTML = "Usernamer most be more than 5 characters";
+    }else if(form.password1.value != form.password2.value){
+        alert.innerHTML = "Password do not match";
+    }else{
+        alert.innerHTML = "User login successful";
+        alert.style = 'color:green; background-color: pink;'
+    }
+}
+
+    </script>
+</body>
+</html>
